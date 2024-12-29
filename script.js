@@ -11,9 +11,9 @@ const btn3 = document.querySelector('.btn3');
 
 function activeScroll() {
     menu.classList.toggle('ativo', scrollY > 20);
-    pergunta.classList.toggle('aparece', scrollY > -10);
-    propaganda.classList.toggle('aparece2', scrollY > -10);
-    texto.classList.toggle('textoAtivo', scrollY > 500);
+    pergunta.classList.toggle('aparece', scrollY > -20);
+    propaganda.classList.toggle('aparece2', scrollY > -20);
+    texto.classList.toggle('textoAtivo', scrollY > 400);
 }
 
 window.addEventListener('scroll', activeScroll);
