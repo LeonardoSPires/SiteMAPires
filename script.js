@@ -7,13 +7,41 @@ const sobre = document.querySelector('#sobre');
 const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
+const slides = document.querySelectorAll('#slideShow .imagemHome');
+const slides2 = document.querySelectorAll('#slideShowDivulga .divulga');
+let currentSlide = 0;
+let currentSlide2 = 0;
 
+
+function showNextSlide() {
+    // Remove a classe "active" da imagem atual
+    slides[currentSlide].classList.remove('active');
+    // Atualiza o índice para a próxima imagem
+    currentSlide = (currentSlide + 1) % slides.length;
+    // Adiciona a classe "active" à nova imagem
+    slides[currentSlide].classList.add('active');
+}
+
+setInterval(showNextSlide, 5000);
+
+slides[currentSlide].classList.add('active');
+
+function showNextSlide2() {
+ // Remove a classe "active" da imagem atual
+ slides2[currentSlide2].classList.remove('active');
+ // Atualiza o índice para a próxima imagem
+ currentSlide2 = (currentSlide2 + 1) % slides2.length;
+ // Adiciona a classe "active" à nova imagem
+ slides2[currentSlide2].classList.add('active');
+}
+
+setInterval(showNextSlide2, 5000);
+
+slides2[currentSlide2].classList.add('active');
 
 function activeScroll() {
     menu.classList.toggle('ativo', scrollY > 20);
-    pergunta.classList.toggle('aparece', scrollY > -20);
-    propaganda.classList.toggle('aparece2', scrollY > -20);
-    texto.classList.toggle('textoAtivo', scrollY > 400);
+    texto.classList.toggle('textoAtivo', scrollY > 500);
 }
 
 window.addEventListener('scroll', activeScroll);

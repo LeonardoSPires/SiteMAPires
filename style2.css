@@ -65,22 +65,34 @@ header .iconRede a {
 }
 
 /* Home */
-header .imagemNav {
-    top: 0;
-    left: 25rem;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    opacity: 80%;
+header #slideShow {
+    position: relative;
+
 }
 
-header .pergunta {
+
+header #slideShow .imagemHome {
+    top: 0;
+    left: 23rem;
+    position: absolute;
+    z-index: 1;
+    width: 85%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+header #slideShow .imagemHome.active {
+    opacity: 1;
+}
+
+
+header #slideShowDivulga .divulga {
     color: #f3a922;
     z-index: 4;
     position: absolute;
     left: 370px;
-    top: 900px;
+    top: 100px;
     width: 50rem;
     height: 200px;
     bottom: 2000px;
@@ -89,46 +101,18 @@ header .pergunta {
     padding-top: 60px;
     transition: .7s;
     font-weight: 700;
-    opacity: 1;
-}
-
-header .pergunta.aparece {
-    top: 200px;
-    left: 350px;
-    opacity: 1;
-}
-
-header .propaganda {
-    color: #f3a922;
-    z-index: 4;
-    position: absolute;
-    left: 35rem;
-    top: 900px;
-    width: 75rem;
-    font-size: 3rem;
-    height: 25rem;
-    padding: 50px 20px;
-    border-radius: 30px;
-    transition: .7s;
     opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-header .propaganda.aparece2 {
-    top: 400px;
-    transition-delay: 2s;
-    width: 50rem;
-    text-align: center;
+header #slideShowDivulga .divulga.active {
     opacity: 1;
 }
 
-header div h2 span {
-    text-decoration: underline;
-}
 
 /* Navegação */
 .navBar {
     width: 100%;
-    height: 8rem;
     padding: 2rem 1rem;
     z-index: 5;
     position: fixed;
@@ -178,7 +162,7 @@ header div h2 span {
 Nav.ativo {
     background: var(--black);
     transition: .5s ease-in-out;
-    height: 8rem;
+    height: 9rem;
 }
 
 /*About*/
@@ -333,7 +317,7 @@ section .content .ativaTxt {
 
 .projetos .box-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-column-gap: 1rem;
     justify-content: space-evenly;
     align-content: center;
@@ -606,49 +590,37 @@ html {
         width: 100%;
     } 
 
-    /* rede social */
+
     header .iconRede {
         display: none;
     }
 
     /* header */
-    header .imagemNav {
+    header #slideShow .imagemHome {
         left: 0;
-        width: 100%;
+        width: 110%;
         position: absolute;
         object-fit: cover;
     }
 
     .navBar {
         padding: 1rem;
+        height: 9rem;
     }
 
-    header .pergunta {
-        font-size: 2.5rem;
+    header #slideShowDivulga .divulga {
+        font-size: 3.5rem;
         width: 30rem;
-    }
-    header .pergunta.aparece {
-        left: 80px;
-
-    }
-
-    header .propaganda {
-        font-size: 2rem;
+        top: 200px;
         left: 100px;
-        width: 25rem
-    }
-
-    header .propaganda.aparece2 {
-        top: 300px;
-        left: 10px;
-        width: 45rem;
     }
 
     /* Navegação */
-    .navBar {
-        display: flex;
+ 
+    .navBar .icones {
+        justify-content: space-evenly;
+        margin-bottom: 20px;
     }
-
     .navBar .icones .menu {
         display: none;
     }
@@ -667,7 +639,7 @@ html {
 
     /* Home section */
     section .content .texto {
-        left: 650px;
+        left: 50px;
         width: 80%;
         height: 70vh;
         font-size: 2rem;
@@ -737,7 +709,7 @@ html {
 }
 
 
-@media screen and (min-width: 451px) and (max-width: 699px) {
+@media screen and (min-width: 451px) and (max-width: 599px) {
     :root {
         font-size: 8px;
         /* Reduz o tamanho da fonte */
@@ -750,30 +722,26 @@ html {
     }
 
     /* header */
-    header .imagemNav {
+    /* header */
+    header #slideShow .imagemHome {
         left: 0;
+        width: 110%;
         position: absolute;
         object-fit: cover;
     }
 
     .navBar {
         padding: 1rem;
+        height: 9rem;
     }
 
-    header .pergunta {
-        font-size: 2.5rem;
+    header #slideShowDivulga .divulga {
+        font-size: 3.5rem;
         width: 30rem;
+        top: 200px;
+        left: 100px;
     }
 
-    header .propaganda {
-        font-size: 2rem;
-        width: 25rem
-    }
-
-    header .propaganda.aparece2 {
-        top: 300px;
-        width: 45rem;
-    }
 
     /* Navegação */
     .navBar {
@@ -867,9 +835,160 @@ html {
         display: flex;
         justify-content: center;
     }
+}
+    footer .footerContainer .newsletter form {
+        align-items: center
+    }
+    @media screen and (min-width: 600px) and (max-width: 1050px) {
+        
+    :root {
+        font-size: 8px;
+        /* Reduz o tamanho da fonte */
+    }
+        /* rede social */
+    header .iconRede {
+        top: 55%;
+        left: -10%;
+    }
+    
+    header .iconRede .social {
+        font-size: 1.5rem;
+    }
+    
+    header .iconRede .social img {
+        height: 15px;
+        width: 15px;
+    }
+    
+    header .iconRede .linha {
+        font-size: 1.5rem;
+        padding: 0px 12px;
+    }
+    
+    header .iconRede a {
+        padding: 5px;
+    }
+ 
+    /* header */
+    header .imagem {
+        left: 0;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .navBar {
+        padding: 1rem;
+    }
+
+    header .pergunta {
+        font-size: 2.5rem;
+        width: 30rem;
+    }
+
+    header .propaganda {
+        font-size: 2rem;
+        width: 25rem
+    }
+
+    header .propaganda.aparece2 {
+        top: 300px;
+        width: 45rem;
+    }
+
+    /* Navegação */
+    .navBar {
+        display: grid;
+        justify-content: space-evenly;
+    }
+
+    .navBar .menu {
+        display: none;
+    }
+
+    .navBar img {
+        margin: 10px 10px 10px 10px;
+    }
+
+    .navBar .logo {
+        font-size: 2rem;
+        color: #d89a27;
+        margin: 10px;
+        padding-right: 2rem;
+    }
+
+    /* Home section */
+    section .content .texto {
+        left: 200%;
+        width: 350px;
+        font-size: 2rem;
+    }
+
+    section .content .texto.textoAtivo {
+        left: 190px;
+    }
+
+    section .content button {
+        display: none;
+    }
+
+    section .content .texto h1 {
+        padding-bottom: 3rem;
+        font-size: 3rem;
+    }
+
+    section .content .texto {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+    }
+    
+    /*projetos*/
+    .projetos .box-container {
+        grid-template-columns: auto;
+    }
+    .projetos .box-container video {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*galeria*/
+    .galeriaFotos .fotos {
+        grid-template-columns: auto auto;
+    }
+
+    .galeriaFotos .fotos img {
+        width: 170px;
+        height: 230px;
+        opacity: .8;
+    }
+
+    /*formulario*/
+    .faleConosco .formulario {
+        width: 95%;
+    }
+    .faleConosco .formulario button {
+        width: 50%;
+    }
+
+    /*footer*/
+    footer .footerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footerContainer .contatos,
+    footer .footerContainer .newsletter {
+        width: 100%;
+        text-align: center;
+    }
+    footer .footerContainer ul {
+        padding: 25px 0 40px 0;
+        display: flex;
+        justify-content: center;
+    }
 
     footer .footerContainer .newsletter form {
         align-items: center
     }
-}
-
+    }
