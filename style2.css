@@ -40,9 +40,8 @@ header .iconRede .social {
     transform: rotate(270deg);
     font-weight: 300;
     font-size: 2rem;
-    height: 37px;
+    height: 10px;
     width: max-content;
-    align-items: center;
 }
 
 header .iconRede .social img {
@@ -88,7 +87,9 @@ header #slideShow .imagemHome.active {
 
 
 header #slideShowDivulga .divulga {
-    color: #f3a922;
+    color: #eba82d;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #000;
     z-index: 4;
     position: absolute;
     left: 370px;
@@ -212,33 +213,31 @@ section .content button {
     width: 160px;
     height: 160px;
     font-size: 2.3rem;
-    color: #13131a;
-    background-color: #ffffffb0;
+    color: #fff;
+    background-color: #4e5cdf;
     text-align: right;
     border-radius: 50%;
     align-items: center;
     font-weight: 700;
+    justify-content: center;
     left: 10%;
 }
 
 section .content button:hover {
-    color: #fff;
-    background-color: #d89a27;
+    color: #13131a;
+    background-color: #ffffffb0;
 }
 
 section .content .btn1 {
     top: 115%;
-    padding-left: 25px;
 }
 
 section .content .btn2 {
     top: 145%;
-    padding-left: 45px;
 }
 
 section .content .btn3 {
     top: 175%;
-    padding-left: 25px;
 }
 
 section .content #txtBtn1 {
@@ -609,8 +608,8 @@ html {
     }
 
     header #slideShowDivulga .divulga {
-        font-size: 3.5rem;
-        width: 30rem;
+        font-size: 5rem;
+        width: 35rem;
         top: 200px;
         left: 100px;
     }
@@ -637,12 +636,18 @@ html {
         padding-right: 2rem;
     }
 
-    /* Home section */
+    /*About */
+    section .content .texto h1 {
+        padding-bottom: 3rem;
+        font-size: 4rem;
+    }
+
     section .content .texto {
+        top: 110%;
         left: 50px;
         width: 80%;
-        height: 70vh;
-        font-size: 2rem;
+        height: 35vh;
+        font-size: 2.3rem;
     }
     
     section .content .texto.textoAtivo {
@@ -650,13 +655,44 @@ html {
     }
 
     section .content button {
-        display: none;
+        width:13rem;
+        height: 13rem;
+        left: 7%;
+    }
+    section .content .btn1 {
+        top: 155%;
+    }
+    section .content .btn2 {
+        top: 172.5%;
+    }
+    section .content .btn3 {
+        top: 190%;
+    }
+    section .content #txtBtn1 {
+        top: 151%;
+        left: 34%;
+        width: 262px;
+        height: 160px;
+        font-size: 2rem;
+        padding: 10px;
+    }
+    section .content #txtBtn2 {
+        top: 170%;
+        left: 34%;
+        width: 262px;
+        height: 160px;
+        font-size: 2rem;
+        padding: 10px;
+    }
+    section .content #txtBtn3 {
+        top: 185%;
+        left: 34%;
+        width: 262px;
+        height: 160px;
+        font-size: 2rem;
+        padding: 10px;
     }
 
-    section .content .texto h1 {
-        padding-bottom: 3rem;
-        font-size: 3rem;
-    }
    
     /*projetos*/
     .projetos .box-container {
@@ -708,137 +744,6 @@ html {
     }
 }
 
-
-@media screen and (min-width: 451px) and (max-width: 599px) {
-    :root {
-        font-size: 8px;
-        /* Reduz o tamanho da fonte */
-    }
-
- 
-    /* rede social */
-    header .iconRede {
-        display: none;
-    }
-
-    /* header */
-    /* header */
-    header #slideShow .imagemHome {
-        left: 0;
-        width: 110%;
-        position: absolute;
-        object-fit: cover;
-    }
-
-    .navBar {
-        padding: 1rem;
-        height: 9rem;
-    }
-
-    header #slideShowDivulga .divulga {
-        font-size: 3.5rem;
-        width: 30rem;
-        top: 200px;
-        left: 100px;
-    }
-
-
-    /* Navegação */
-    .navBar {
-        display: flex;
-
-    }
-
-    .navBar .menu {
-        display: none;
-    }
-
-    .navBar img {
-        margin: 10px 10px 10px 10px;
-    }
-
-    .navBar .logo {
-        font-size: 2rem;
-        color: #d89a27;
-        margin: 10px;
-        padding-right: 2rem;
-    }
-
-    /* Home section */
-    section .content .texto {
-        left: 200%;
-        width: 350px;
-        font-size: 2rem;
-    }
-
-    section .content .texto.textoAtivo {
-        left: 190px;
-    }
-
-    section .content button {
-        display: none;
-    }
-
-    section .content .texto h1 {
-        padding-bottom: 3rem;
-        font-size: 3rem;
-    }
-
-    section .content .texto {
-        width: 80%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 2rem;
-    }
-    
-    /*projetos*/
-    .projetos .box-container {
-        grid-template-columns: auto;
-    }
-    .projetos .box-container video {
-        width: 100%;
-        height: 100%;
-    }
-
-    /*galeria*/
-    .galeriaFotos .fotos {
-        grid-template-columns: auto auto;
-    }
-
-    .galeriaFotos .fotos img {
-        width: 170px;
-        height: 230px;
-        opacity: .8;
-    }
-
-    /*formulario*/
-    .faleConosco .formulario {
-        width: 95%;
-    }
-    .faleConosco .formulario button {
-        width: 50%;
-    }
-
-    /*footer*/
-    footer .footerContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer .footerContainer .contatos,
-    footer .footerContainer .newsletter {
-        width: 100%;
-        text-align: center;
-    }
-    footer .footerContainer ul {
-        padding: 25px 0 40px 0;
-        display: flex;
-        justify-content: center;
-    }
-}
-    footer .footerContainer .newsletter form {
-        align-items: center
-    }
     @media screen and (min-width: 600px) and (max-width: 1050px) {
         
     :root {
@@ -848,21 +753,22 @@ html {
         /* rede social */
     header .iconRede {
         top: 55%;
-        left: -10%;
+        left: -15%;
     }
     
     header .iconRede .social {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
+
     }
     
     header .iconRede .social img {
-        height: 15px;
-        width: 15px;
+        height: 25px;
+        width: 25px;
     }
     
     header .iconRede .linha {
-        font-size: 1.5rem;
-        padding: 0px 12px;
+        font-size: 2.5rem;
+        padding: 0px 20px;
     }
     
     header .iconRede a {
@@ -877,7 +783,7 @@ html {
     }
 
     .navBar {
-        padding: 1rem;
+        padding: 3rem;
     }
 
     header .pergunta {
@@ -905,8 +811,8 @@ html {
         display: none;
     }
 
-    .navBar img {
-        margin: 10px 10px 10px 10px;
+    .navBar .iconMenu {
+        margin: 10px 3em;
     }
 
     .navBar .logo {
