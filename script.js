@@ -4,13 +4,18 @@ const pergunta = document.querySelector('.pergunta');
 const propaganda = document.querySelector('.propaganda');
 const texto = document.querySelector('.texto');
 const sobre = document.querySelector('#sobre');
-const btn1 = document.querySelector('.btn1');
-const btn2 = document.querySelector('.btn2');
-const btn3 = document.querySelector('.btn3');
+const lnk1 = document.querySelector('.lnk1');
+const lnk2 = document.querySelector('.lnk2');
+const lnk3 = document.querySelector('.lnk3');
 const slides = document.querySelectorAll('#slideShow .imagemHome');
 const slides2 = document.querySelectorAll('#slideShowDivulga .divulga');
 let currentSlide = 0;
 let currentSlide2 = 0;
+
+function activeScroll() {
+    menu.classList.toggle('ativo', scrollY > 5);
+}
+window.addEventListener('scroll', activeScroll);
 
 
 function showNextSlide() {
@@ -39,41 +44,26 @@ setInterval(showNextSlide2, 5000);
 
 slides2[currentSlide2].classList.add('active');
 
-function activeScroll() {
-    menu.classList.toggle('ativo', scrollY > 20);
-    texto.classList.toggle('textoAtivo', scrollY > 500);
-}
-
-window.addEventListener('scroll', activeScroll);
-
-btn1.addEventListener("mouseover", function() {
-    let txtBtn1 = document.querySelector("#txtBtn1")
-    txtBtn1.classList.remove("ativaTxt");
+lnk1.addEventListener("mouseover", () => {
+   lnk1.textContent = "Em resumo, a qualidade de um pedreiro é medida pela sua competência técnica, precisão, responsabilidade e capacidade de trabalhar em equipe, resultando em construções seguras e bem-acabadas.";
+   lnk1.style.transition = ".5s ease-in-out";
 });
-
-btn1.addEventListener("mouseout", function() {
-    let txtBtn1 = document.querySelector("#txtBtn1")
-    txtBtn1.classList.add("ativaTxt");
+lnk1.addEventListener("mouseout", () => {
+    lnk1.textContent = "Qualidade";
+})
+lnk2.addEventListener("mouseover", () => {
+   lnk2.textContent = "Nossa missão é oferecer um bom atendimento e ser transparente em relação aos custos. Buscamos sempre um serviço bem-feito a um preço justo, adaptando-se às necessidades do cliente.";
 });
-
-btn2.addEventListener("mouseover", function() {
-    let txtBtn2 = document.querySelector("#txtBtn2")
-    txtBtn2.classList.remove("ativaTxt");
+lnk2.addEventListener("mouseout", () => {
+    lnk2.textContent = "Preço";
+})
+lnk3.addEventListener("mouseover", () => {
+   lnk3.textContent = "Quando se trata de construção, a segurança é nossa prioridade. Durante todo o processo da obra, tomamos cuidados para garantir que o trabalho seja feito de forma segura tanto para nossa equipe quanto para o cliente";
+   lnk3.style.transition = ".5s ease-in-out";
 });
-btn2.addEventListener("mouseout", function() {
-    let txtBtn2 = document.querySelector("#txtBtn2")
-    txtBtn2.classList.add("ativaTxt");
-});
-
-btn3.addEventListener("mouseover", function() {
-    let txtBtn3 = document.querySelector("#txtBtn3")
-    txtBtn3.classList.remove("ativaTxt");
-});
-
-btn3.addEventListener("mouseout", function() {
-    let txtBtn3 = document.querySelector("#txtBtn3")
-    txtBtn3.classList.add("ativaTxt");
-});
+lnk3.addEventListener("mouseout", () => {
+    lnk3.textContent = "Qualidade";
+})
  
 
 document.getElementById('formContato').addEventListener('submit', function(event) {

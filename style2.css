@@ -29,11 +29,11 @@ header .iconRede {
     color: #f3a922;
     position: absolute;
     top: 65%;
-    left: -16%;
+    left: -12%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 10;
+    z-index: 2;
 }
 
 header .iconRede .social {
@@ -66,9 +66,7 @@ header .iconRede a {
 /* Home */
 header #slideShow {
     position: relative;
-
 }
-
 
 header #slideShow .imagemHome {
     top: 0;
@@ -85,22 +83,18 @@ header #slideShow .imagemHome.active {
     opacity: 1;
 }
 
-
 header #slideShowDivulga .divulga {
     color: #eba82d;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: #000;
     z-index: 4;
     position: absolute;
-    left: 370px;
-    top: 100px;
+    left: 40%;
+    top: 230px;
     width: 50rem;
     height: 200px;
-    bottom: 2000px;
-    font-size: 3.5rem;
+    font-size: 5rem;
     text-align: center;
-    padding-top: 60px;
-    transition: .7s;
     font-weight: 700;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -110,24 +104,31 @@ header #slideShowDivulga .divulga.active {
     opacity: 1;
 }
 
-
 /* Navegação */
 .navBar {
-    width: 100%;
+    min-width: 1300px;
     padding: 2rem 1rem;
     z-index: 5;
     position: fixed;
 }
-.navBar .icones{
+
+.navBar .icones {
     display: grid;
     grid-template-columns: auto auto auto auto;
     align-items: center;
     justify-items: center;
-    justify-content: end;
-
+    justify-content: center;
 }
+
 .navBar .icones .menu {
-    padding: 0 10px 10px 20px;
+    padding: 0 0 0px 50px;
+    font-size: 2rem;
+    color: var(--wht);
+    z-index: 3;
+}
+
+.navBar .icones .iMenu {
+    padding: 0 0 0px 50px;
     font-size: 2rem;
     color: var(--wht);
     z-index: 3;
@@ -143,12 +144,17 @@ header #slideShowDivulga .divulga.active {
 
 .navBar .logo {
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 6rem;
     font-size: 2.2rem;
     color: #d89a27;
     padding-right: 8rem;
     padding-left: 2rem;
-    z-index: 2;
+    z-index: 3;
     font-weight: 700;
+
 }
 
 .navBar a span {
@@ -163,25 +169,31 @@ header #slideShowDivulga .divulga.active {
 Nav.ativo {
     background: var(--black);
     transition: .5s ease-in-out;
-    height: 9rem;
+    height: 10rem;
 }
 
 /*About*/
 section {
     padding-top: 5rem;
-    background: var(--bg);
     transition: 1s ease-in-out;
+    background: rgb(230, 229, 229);
+
+}
+
+section .content h2 {
+    position: absolute;
+    top: 115%;
+    left: 12%;
+    font-size: 3rem;
 }
 
 section .content .img {
     height: 100vh;
     width: 100%;
-    text-align: center;
     background-image: url(./img/capa.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .8;
-    z-index: -1;
+    padding: 2rem;
 }
 
 section .content .texto {
@@ -189,55 +201,73 @@ section .content .texto {
     width: 550px;
     height: 50vh;
     top: 120%;
-    left: 1000px;
+    left: 600px;
     font-size: 2.5rem;
     text-align: justify;
     padding-top: 20px;
     color: black;
     font-weight: bold;
-    transition: .7s;
-}
-section .content .texto.textoAtivo {
-    left: 330px;
-}
 
+}
 section .content .texto h1 {
     padding-bottom: 3rem;
     font-size: 4rem;
 }
 
-
-section .content button {
+section .content a {
     position: absolute;
-    display: flex;
-    width: 160px;
-    height: 160px;
+    width: auto;
+    height: auto;
     font-size: 2.3rem;
     color: #fff;
     background-color: #4e5cdf;
     text-align: right;
-    border-radius: 50%;
+    border-radius: 30px;
     align-items: center;
     font-weight: 700;
     justify-content: center;
     left: 10%;
+    cursor: pointer;
+    padding: 15px;
 }
 
-section .content button:hover {
+section .content a:hover {
     color: #13131a;
     background-color: #ffffffb0;
+    border: solid 2px #4e5cdf;
+    transition: .5s ease-in-out;
+   
 }
 
-section .content .btn1 {
-    top: 115%;
+section .content .lnk1 {
+    top: 130%;
 }
-
-section .content .btn2 {
-    top: 145%;
+section .content .lnk1:hover {
+    width: 500px;
+    font-size: 2rem;
+    left: 5%;
+    top: 129%;
+    padding: 15px;
 }
-
-section .content .btn3 {
-    top: 175%;
+section .content .lnk2 {
+    top: 155%;
+}
+section .content .lnk2:hover {
+    width: 500px;
+    font-size: 2rem;
+    left: 5%;
+    top: 170%;
+    padding: 15px;
+}
+section .content .lnk3 {
+    top: 180%;
+}
+section .content .lnk3:hover {
+    width: 500px;
+    font-size: 2rem;
+    left: 5%;
+    top: 129%;
+    padding: 10px;
 }
 
 section .content #txtBtn1 {
@@ -253,8 +283,8 @@ section .content #txtBtn1 {
     font-weight: bold;
     transition: .7s;
     z-index: 1;
-    padding: 20px;
     border-radius: 10px;
+    align-content: center;
 }
 
 section .content #txtBtn2 {
@@ -270,8 +300,8 @@ section .content #txtBtn2 {
     font-weight: bold;
     transition: .7s;
     z-index: 1;
-    padding: 20px;
     border-radius: 10px;
+    align-content: center;
 }
 
 section .content #txtBtn3 {
@@ -287,20 +317,22 @@ section .content #txtBtn3 {
     font-weight: bold;
     transition: .7s;
     z-index: 1;
-    padding: 20px;
     border-radius: 10px;
-    transition: 1s ease-in-out;
+    align-content: center;
 }
 
 section .content .ativaTxt {
     display: none;
+
 }
+
 
 /* Projetos */
 
 .videos {
     width: 100%;
 }
+
 .projetos {
     width: 100%;
     background: var(--bg);
@@ -323,7 +355,7 @@ section .content .ativaTxt {
 }
 
 .projetos .box-container video {
-    width: 100%;    
+    width: 100%;
     height: 100%;
     margin-bottom: 30px;
     border-radius: 5px;
@@ -580,48 +612,71 @@ html {
 @media screen and (max-width: 450px) {
     :root {
         font-size: 8px;
-        
+
         /* Reduz tamanho da fonte */
     }
-    header {
-        background:none;       
-        height: 100vh;
-        width: 100%;
-    } 
 
+    header {
+        background: none;
+        height: 100vh;
+        max-width: 1400px;
+        justify-content: center;
+    }
 
     header .iconRede {
         display: none;
     }
 
     /* header */
+
     header #slideShow .imagemHome {
         left: 0;
-        width: 110%;
+        width: 100%;
+        display: flex;
         position: absolute;
         object-fit: cover;
     }
 
-    .navBar {
-        padding: 1rem;
-        height: 9rem;
-    }
-
     header #slideShowDivulga .divulga {
-        font-size: 5rem;
-        width: 35rem;
-        top: 200px;
-        left: 100px;
+        -webkit-text-stroke-width: 1px;
+        font-size: 3.5rem;
+        width: 25rem;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
     }
 
     /* Navegação */
- 
+    .navBar {
+        max-width: 450px;
+        min-width: 250px;
+        width: 100%;
+        padding: 1rem;
+        height: 7rem;
+    }
+
+    .navBar.ativo {
+        max-width: 449px;
+        min-width: 250px;
+        padding: 1rem;
+        height: 14em;
+    }
+
     .navBar .icones {
-        justify-content: space-evenly;
+        justify-content: center;
         margin-bottom: 20px;
     }
+
+    .navBar .icones .iMenu {
+        padding: 0 0 0px 10px;
+        font-size: 2rem;
+        color: var(--wht);
+        z-index: 3;
+    }
+
     .navBar .icones .menu {
         display: none;
+
     }
 
     .navBar img {
@@ -632,72 +687,113 @@ html {
         position: relative;
         font-size: 2rem;
         color: #d89a27;
-        margin: 10px;
         padding-right: 2rem;
     }
 
     /*About */
+    section .content {
+        max-width: 449px;
+        min-width: 250px;
+    }
     section .content .texto h1 {
-        padding-bottom: 3rem;
-        font-size: 4rem;
+        padding-bottom: 2rem;
+        font-size: 3rem;
     }
 
     section .content .texto {
+        position: absolute;
+        left: 50px;
         top: 110%;
-        left: 50px;
-        width: 80%;
-        height: 35vh;
-        font-size: 2.3rem;
+        width: 75%;
+        height: 30vh;
+        font-size: 2rem;
     }
-    
-    section .content .texto.textoAtivo {
-        left: 50px;
-    }
-
-    section .content button {
-        width:13rem;
-        height: 13rem;
-        left: 7%;
-    }
-    section .content .btn1 {
+    section .content h2 {
+        padding-bottom: 2rem;
+        font-size: 2.5rem;
         top: 155%;
+        left: 32%;
     }
-    section .content .btn2 {
-        top: 172.5%;
-    }
-    section .content .btn3 {
-        top: 190%;
-    }
-    section .content #txtBtn1 {
-        top: 151%;
-        left: 34%;
-        width: 262px;
-        height: 160px;
-        font-size: 2rem;
+    section .content a {
+        width: auto;
+        height: auto;
+        left: 35%;
+        border-radius: 20px;
         padding: 10px;
     }
-    section .content #txtBtn2 {
+
+    section .content .lnk1 {
+        top: 162%;
+    }
+    section .content .lnk1:hover {
+        width: 350px;
+        font-size: 1.8rem;
+        left: 5%;
+        top: 160%;
+    }
+   
+    section .content .lnk2 {
+        top: 155%;
+        left: 40%;
+    }
+    section .content .lnk2:hover {
+        width: 350px;
+        font-size: 1.8rem;
+        left: 5%;
         top: 170%;
-        left: 34%;
-        width: 262px;
-        height: 160px;
-        font-size: 2rem;
+        padding: 15px;
+    }
+    section .content .lnk3 {
+        top: 180%;
+    }
+    section .content .lnk3:hover {
+        width: 350px;
+        font-size: 1.8rem;
+        left: 5%;
+        top: 185%;
         padding: 10px;
     }
-    section .content #txtBtn3 {
-        top: 185%;
-        left: 34%;
+    section .content .lnk2 {
+        top: 175%;
+    }
+
+    section .content .lnk3 {
+        top: 188%;
+    }
+
+    section .content #txtBtn1 {
+        top: 150%;
+        left: 18%;
         width: 262px;
         height: 160px;
         font-size: 2rem;
         padding: 10px;
     }
 
-   
+    section .content #txtBtn2 {
+        top: 150%;
+        left: 18%;
+        width: 262px;
+        height: 160px;
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    section .content #txtBtn3 {
+        top: 150%;
+        left: 18%;
+        width: 262px;
+        height: 160px;
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+
     /*projetos*/
     .projetos .box-container {
         grid-template-columns: 1fr;
     }
+
     .projetos .box-container video {
         width: 100%;
         height: 100%;
@@ -718,6 +814,7 @@ html {
     .faleConosco .formulario {
         width: 95%;
     }
+
     .faleConosco .formulario button {
         width: 50%;
     }
@@ -733,6 +830,7 @@ html {
         width: 100%;
         text-align: center;
     }
+
     footer .footerContainer ul {
         padding: 25px 0 0 0;
         display: flex;
@@ -744,38 +842,52 @@ html {
     }
 }
 
-    @media screen and (min-width: 600px) and (max-width: 1050px) {
-        
+@media screen and (min-width: 600px) and (max-width: 949px) {
+
     :root {
         font-size: 8px;
         /* Reduz o tamanho da fonte */
     }
-        /* rede social */
+
+    /* rede social */
     header .iconRede {
         top: 55%;
         left: -15%;
     }
-    
+
     header .iconRede .social {
         font-size: 2.5rem;
 
     }
-    
+
     header .iconRede .social img {
         height: 25px;
         width: 25px;
     }
-    
+
     header .iconRede .linha {
         font-size: 2.5rem;
         padding: 0px 20px;
     }
-    
+
     header .iconRede a {
         padding: 5px;
     }
- 
+
     /* header */
+    header #slideShowDivulga .divulga {
+        -webkit-text-stroke-width: 1.5px;
+        font-size: 5rem;
+        width: 45rem;
+        left: 60%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+    }
+
+    header #slideShow .imagemHome {
+        width: 80%;
+    }
+
     header .imagem {
         left: 0;
         position: absolute;
@@ -783,32 +895,19 @@ html {
     }
 
     .navBar {
+        max-width: 600px;
+        min-width: 949px;
         padding: 3rem;
     }
 
-    header .pergunta {
-        font-size: 2.5rem;
-        width: 30rem;
-    }
-
-    header .propaganda {
-        font-size: 2rem;
-        width: 25rem
-    }
-
-    header .propaganda.aparece2 {
-        top: 300px;
-        width: 45rem;
-    }
-
     /* Navegação */
+    .navBar .icones .menu {
+        display: block;
+    }
+
     .navBar {
         display: grid;
         justify-content: space-evenly;
-    }
-
-    .navBar .menu {
-        display: none;
     }
 
     .navBar .iconMenu {
@@ -822,37 +921,65 @@ html {
         padding-right: 2rem;
     }
 
-    /* Home section */
+    /* About */
+
+    section .content a {
+        width: 16rem;
+        height: 10rem;
+        left: 15%;
+        border-radius: 20px;
+    }
+
+    section .content #txtBtn1 {
+        top: 110%;
+        left: 40%;
+        width: 460px;
+        height: 120px;
+        font-size: 2rem;
+
+    }
+
+    section .content #txtBtn2 {
+        top: 140%;
+        left: 40%;
+        width: 460px;
+        height: 120px;
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    section .content #txtBtn3 {
+        top: 185%;
+        left: 34%;
+        width: 262px;
+        height: 160px;
+        font-size: 2rem;
+        padding: 10px;
+    }
+
     section .content .texto {
-        left: 200%;
+        left: 110%;
         width: 350px;
         font-size: 2rem;
+        display: none;
     }
 
     section .content .texto.textoAtivo {
-        left: 190px;
+        left: 50%;
     }
 
-    section .content button {
-        display: none;
-    }
 
     section .content .texto h1 {
         padding-bottom: 3rem;
         font-size: 3rem;
     }
 
-    section .content .texto {
-        width: 80%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 2rem;
-    }
-    
+
     /*projetos*/
     .projetos .box-container {
         grid-template-columns: auto;
     }
+
     .projetos .box-container video {
         width: 100%;
         height: 100%;
@@ -873,6 +1000,7 @@ html {
     .faleConosco .formulario {
         width: 95%;
     }
+
     .faleConosco .formulario button {
         width: 50%;
     }
@@ -888,6 +1016,7 @@ html {
         width: 100%;
         text-align: center;
     }
+
     footer .footerContainer ul {
         padding: 25px 0 40px 0;
         display: flex;
@@ -897,4 +1026,140 @@ html {
     footer .footerContainer .newsletter form {
         align-items: center
     }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1199px) {
+
+    :root {
+        font-size: 8px;
+        /* Reduz o tamanho da fonte */
     }
+
+    /* rede social */
+    header .iconRede {
+        top: 55%;
+        left: -15%;
+    }
+
+    header .iconRede .social {
+        font-size: 2.5rem;
+
+    }
+
+    header .iconRede .social img {
+        height: 25px;
+        width: 25px;
+    }
+
+    header .iconRede .linha {
+        font-size: 2.5rem;
+        padding: 0px 20px;
+    }
+
+    header .iconRede a {
+        padding: 5px;
+    }
+
+    /* header */
+    header .imagem {
+        left: 0;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .navBar {
+        min-width: 1050px;
+        padding: 3rem;
+    }
+
+    /* Navegação */
+    .navBar .icones .menu {
+        display: block;
+    }
+
+    .navBar {
+        display: grid;
+        justify-content: space-evenly;
+    }
+
+    .navBar .iconMenu {
+        margin: 10px 3em;
+    }
+
+    .navBar .logo {
+        font-size: 2rem;
+        color: #d89a27;
+        margin: 10px;
+        padding-right: 2rem;
+    }
+
+    /* About */
+    section .content .texto {
+        left: 150%;
+        width: 350px;
+        font-size: 2rem;
+    }
+
+    section .content .texto.textoAtivo {
+        left: 50%;
+
+    }
+
+    section .content .texto h1 {
+        padding-bottom: 3rem;
+        font-size: 3rem;
+    }
+
+
+    /*projetos*/
+    .projetos .box-container {
+        grid-template-columns: auto;
+    }
+
+    .projetos .box-container video {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*galeria*/
+    .galeriaFotos .fotos {
+        grid-template-columns: auto auto;
+    }
+
+    .galeriaFotos .fotos img {
+        width: 170px;
+        height: 230px;
+        opacity: .8;
+    }
+
+    /*formulario*/
+    .faleConosco .formulario {
+        width: 95%;
+    }
+
+    .faleConosco .formulario button {
+        width: 50%;
+    }
+
+    /*footer*/
+    footer .footerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footerContainer .contatos,
+    footer .footerContainer .newsletter {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .footerContainer ul {
+        padding: 25px 0 40px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .footerContainer .newsletter form {
+        align-items: center
+    }
+}
