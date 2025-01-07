@@ -6,7 +6,6 @@
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
     font-size: 10px;
 }
-
 * {
     height: auto;
     margin: 0;
@@ -17,14 +16,12 @@
     font-family: "Roboto", sans-serif;
     scrollbar-width: none;
 }
-
 /* Rede social */
 header {
     background: var(--black);
     height: 100vh;
     width: 100%;
 }
-
 header .iconRede {
     color: #f3a922;
     position: absolute;
@@ -35,7 +32,6 @@ header .iconRede {
     align-items: center;
     z-index: 2;
 }
-
 header .iconRede .social {
     transform: rotate(270deg);
     font-weight: 300;
@@ -43,11 +39,9 @@ header .iconRede .social {
     height: 10px;
     width: max-content;
 }
-
 header .iconRede .social img {
     transform: rotate(90deg);
 }
-
 header .iconRede .linha {
     transform: rotate(270deg);
     width: 155px;
@@ -58,16 +52,13 @@ header .iconRede .linha {
     color: var(--black);
     padding: 0px 20px 0px 20px;
 }
-
 header .iconRede a {
     padding: 5px;
 }
-
 /* Home */
 header #slideShow {
     position: relative;
 }
-
 header #slideShow .imagemHome {
     top: 0;
     left: 23rem;
@@ -78,11 +69,9 @@ header #slideShow .imagemHome {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-
 header #slideShow .imagemHome.active {
     opacity: 1;
 }
-
 header #slideShowDivulga .divulga {
     color: #eba82d;
     -webkit-text-stroke-width: 1.5px;
@@ -99,11 +88,9 @@ header #slideShowDivulga .divulga {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-
 header #slideShowDivulga .divulga.active {
     opacity: 1;
 }
-
 /* Navegação */
 .navBar {
     min-width: 1300px;
@@ -111,7 +98,6 @@ header #slideShowDivulga .divulga.active {
     z-index: 5;
     position: fixed;
 }
-
 .navBar .icones {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -119,29 +105,24 @@ header #slideShowDivulga .divulga.active {
     justify-items: center;
     justify-content: center;
 }
-
 .navBar .icones .menu {
     padding: 0 0 0px 50px;
     font-size: 2rem;
     color: var(--wht);
     z-index: 3;
 }
-
+.navBar .menu:hover {
+    color: #d89a27;
+}
 .navBar .icones .iMenu {
     padding: 0 0 0px 50px;
     font-size: 2rem;
     color: var(--wht);
     z-index: 3;
 }
-
-.navBar .menu:hover {
-    color: #d89a27;
-}
-
 .navBar #sobre.ativo {
     color: #d89a27;
 }
-
 .navBar .logo {
     position: absolute;
     display: flex;
@@ -177,16 +158,13 @@ section {
     padding-top: 5rem;
     transition: 1s ease-in-out;
     background: rgb(230, 229, 229);
-
 }
-
 section .content h2 {
     position: absolute;
     top: 115%;
-    left: 12%;
+    left: 10%;
     font-size: 3rem;
 }
-
 section .content .img {
     height: 100vh;
     width: 100%;
@@ -194,6 +172,7 @@ section .content .img {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 2rem;
+    opacity: .9;
 }
 
 section .content .texto {
@@ -207,7 +186,6 @@ section .content .texto {
     padding-top: 20px;
     color: black;
     font-weight: bold;
-
 }
 section .content .texto h1 {
     padding-bottom: 3rem;
@@ -216,19 +194,20 @@ section .content .texto h1 {
 
 section .content a {
     position: absolute;
-    width: auto;
+    width: 230px;
     height: auto;
     font-size: 2.3rem;
     color: #fff;
     background-color: #4e5cdf;
-    text-align: right;
+    text-align: center;
     border-radius: 30px;
     align-items: center;
     font-weight: 700;
     justify-content: center;
     left: 10%;
     cursor: pointer;
-    padding: 15px;
+    padding: 2rem 2rem;
+    box-shadow: 4px 5px 8px 3px #13131a;
 }
 
 section .content a:hover {
@@ -236,97 +215,34 @@ section .content a:hover {
     background-color: #ffffffb0;
     border: solid 2px #4e5cdf;
     transition: .5s ease-in-out;
-   
+    font-size: 2.5rem;
+    width: 500px;
 }
 
 section .content .lnk1 {
     top: 130%;
 }
 section .content .lnk1:hover {
-    width: 500px;
-    font-size: 2rem;
     left: 5%;
-    top: 129%;
+    top: 125%;
     padding: 15px;
 }
 section .content .lnk2 {
     top: 155%;
 }
 section .content .lnk2:hover {
-    width: 500px;
-    font-size: 2rem;
     left: 5%;
-    top: 170%;
+    top: 145%;
     padding: 15px;
 }
 section .content .lnk3 {
     top: 180%;
 }
 section .content .lnk3:hover {
-    width: 500px;
-    font-size: 2rem;
     left: 5%;
-    top: 129%;
+    top: 170%;
     padding: 10px;
 }
-
-section .content #txtBtn1 {
-    position: absolute;
-    top: 113%;
-    left: 35%;
-    width: 560px;
-    height: 200px;
-    background-color: #fff;
-    font-size: 2.2rem;
-    text-align: justify;
-    color: black;
-    font-weight: bold;
-    transition: .7s;
-    z-index: 1;
-    border-radius: 10px;
-    align-content: center;
-}
-
-section .content #txtBtn2 {
-    position: absolute;
-    top: 143%;
-    left: 35%;
-    width: 560px;
-    height: 200px;
-    background-color: #fff;
-    font-size: 2.2rem;
-    text-align: justify;
-    color: black;
-    font-weight: bold;
-    transition: .7s;
-    z-index: 1;
-    border-radius: 10px;
-    align-content: center;
-}
-
-section .content #txtBtn3 {
-    position: absolute;
-    top: 173%;
-    left: 35%;
-    width: 560px;
-    height: 200px;
-    background-color: #fff;
-    font-size: 2.2rem;
-    text-align: justify;
-    color: black;
-    font-weight: bold;
-    transition: .7s;
-    z-index: 1;
-    border-radius: 10px;
-    align-content: center;
-}
-
-section .content .ativaTxt {
-    display: none;
-
-}
-
-
 /* Projetos */
 
 .videos {
@@ -342,7 +258,7 @@ section .content .ativaTxt {
     color: #d89a27;
     width: 100%;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4.5rem;
     padding-bottom: 7rem;
 }
 
@@ -380,7 +296,7 @@ section .content .ativaTxt {
     color: #d89a27;
     width: 100%;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4.5rem;
     padding-bottom: 7rem;
 }
 
@@ -462,8 +378,8 @@ section .content .ativaTxt {
 }
 
 .faleConosco .formulario button {
-    width: 50%;
-    padding: 15px;
+    width: 35%;
+    padding: 2rem;
     background-color: #d89a27;
     color: var(--wht);
     border: none;
@@ -510,6 +426,12 @@ footer .footerContainer h2 {
 footer .footerContainer p {
     font-size: 1.9rem;
     font-weight: 300;
+}
+footer .footerContainer a {
+    font-size: 1.9rem;
+    font-weight: 300;
+    color: whitesmoke;
+    cursor: pointer;
 }
 
 footer .footerContainer .celFooter {
@@ -609,26 +531,22 @@ html {
 /* Responsividade */
 
 /* Para telas pequenas (móveis e tablets) */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 539px) {
     :root {
         font-size: 8px;
 
         /* Reduz tamanho da fonte */
     }
-
     header {
         background: none;
         height: 100vh;
         max-width: 1400px;
         justify-content: center;
     }
-
     header .iconRede {
         display: none;
     }
-
     /* header */
-
     header #slideShow .imagemHome {
         left: 0;
         width: 100%;
@@ -636,7 +554,6 @@ html {
         position: absolute;
         object-fit: cover;
     }
-
     header #slideShowDivulga .divulga {
         -webkit-text-stroke-width: 1px;
         font-size: 3.5rem;
@@ -645,7 +562,6 @@ html {
         top: 40%;
         transform: translate(-50%, -50%);
     }
-
     /* Navegação */
     .navBar {
         max-width: 450px;
@@ -654,35 +570,28 @@ html {
         padding: 1rem;
         height: 7rem;
     }
-
     .navBar.ativo {
         max-width: 449px;
         min-width: 250px;
         padding: 1rem;
         height: 14em;
     }
-
     .navBar .icones {
         justify-content: center;
         margin-bottom: 20px;
     }
-
     .navBar .icones .iMenu {
         padding: 0 0 0px 10px;
         font-size: 2rem;
         color: var(--wht);
         z-index: 3;
     }
-
     .navBar .icones .menu {
         display: none;
-
     }
-
     .navBar img {
         margin: 10px;
     }
-
     .navBar .logo {
         position: relative;
         font-size: 2rem;
@@ -715,9 +624,9 @@ html {
         left: 32%;
     }
     section .content a {
-        width: auto;
+        width: 150px;
         height: auto;
-        left: 35%;
+        left: 30%;
         border-radius: 20px;
         padding: 10px;
     }
@@ -734,7 +643,6 @@ html {
    
     section .content .lnk2 {
         top: 155%;
-        left: 40%;
     }
     section .content .lnk2:hover {
         width: 350px;
@@ -756,39 +664,9 @@ html {
     section .content .lnk2 {
         top: 175%;
     }
-
     section .content .lnk3 {
         top: 188%;
     }
-
-    section .content #txtBtn1 {
-        top: 150%;
-        left: 18%;
-        width: 262px;
-        height: 160px;
-        font-size: 2rem;
-        padding: 10px;
-    }
-
-    section .content #txtBtn2 {
-        top: 150%;
-        left: 18%;
-        width: 262px;
-        height: 160px;
-        font-size: 2rem;
-        padding: 10px;
-    }
-
-    section .content #txtBtn3 {
-        top: 150%;
-        left: 18%;
-        width: 262px;
-        height: 160px;
-        font-size: 2rem;
-        padding: 10px;
-    }
-
-
     /*projetos*/
     .projetos .box-container {
         grid-template-columns: 1fr;
@@ -842,7 +720,7 @@ html {
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 949px) {
+@media screen and (min-width: 540px) and (max-width: 949px) {
 
     :root {
         font-size: 8px;
@@ -850,31 +728,25 @@ html {
     }
 
     /* rede social */
-    header .iconRede {
+     header .iconRede {
         top: 55%;
-        left: -15%;
+        left: -12%;
     }
-
     header .iconRede .social {
-        font-size: 2.5rem;
-
+        font-size: 2rem;
     }
-
     header .iconRede .social img {
         height: 25px;
         width: 25px;
     }
-
     header .iconRede .linha {
-        font-size: 2.5rem;
-        padding: 0px 20px;
+        font-size: 2rem;
+        padding: 0px 10px;
     }
-
     header .iconRede a {
         padding: 5px;
     }
-
-    /* header */
+    /* home */
     header #slideShowDivulga .divulga {
         -webkit-text-stroke-width: 1.5px;
         font-size: 5rem;
@@ -893,31 +765,26 @@ html {
         position: absolute;
         object-fit: cover;
     }
-
+ /* Navegação */
     .navBar {
-        max-width: 600px;
-        min-width: 949px;
-        padding: 3rem;
+        display: grid;
+        justify-content: center;
+        max-width: 949px;
+        min-width: 600px;
+        width: 100%;
+        padding: 2rem;
     }
 
-    /* Navegação */
     .navBar .icones .menu {
         display: block;
     }
-
-    .navBar {
-        display: grid;
-        justify-content: space-evenly;
-    }
-
     .navBar .iconMenu {
-        margin: 10px 3em;
+        margin: 1rem 3rem;
     }
-
     .navBar .logo {
         font-size: 2rem;
         color: #d89a27;
-        margin: 10px;
+        margin: 1rem;
         padding-right: 2rem;
     }
 
@@ -925,69 +792,68 @@ html {
 
     section .content a {
         width: 16rem;
-        height: 10rem;
         left: 15%;
         border-radius: 20px;
     }
-
-    section .content #txtBtn1 {
-        top: 110%;
-        left: 40%;
-        width: 460px;
-        height: 120px;
-        font-size: 2rem;
-
+    section .content .lnk1 {
+        top: 130%;
     }
-
-    section .content #txtBtn2 {
-        top: 140%;
-        left: 40%;
-        width: 460px;
-        height: 120px;
-        font-size: 2rem;
+    section .content .lnk1:hover {
+        width: 350px;
+        font-size: 1.8rem;
+        left: 5%;
+        top: 125%;
+    }
+   
+    section .content .lnk2 {
+        top: 160%;
+    }
+    section .content .lnk2:hover {
+        width: 350px;
+        font-size: 1.8rem;
+        left: 5%;
+        top: 150%;
+        padding: 15px;
+    }
+    section .content .lnk3 {
+        top: 190%;
+    }
+    section .content .lnk3:hover {
+        width: 350px;
+        font-size: 1.8rem;
+        left: 5%;
+        top: 180%;
         padding: 10px;
     }
-
-    section .content #txtBtn3 {
-        top: 185%;
-        left: 34%;
-        width: 262px;
-        height: 160px;
-        font-size: 2rem;
-        padding: 10px;
-    }
-
     section .content .texto {
-        left: 110%;
+        left: 50%;
         width: 350px;
         font-size: 2rem;
-        display: none;
     }
-
-    section .content .texto.textoAtivo {
-        left: 50%;
-    }
-
-
     section .content .texto h1 {
         padding-bottom: 3rem;
         font-size: 3rem;
     }
-
-
     /*projetos*/
-    .projetos .box-container {
-        grid-template-columns: auto;
+    .videos {
+       min-height: max-content;
     }
-
+    .projetos .box-container {
+        grid-template-columns: auto auto auto auto;
+        
+    }
     .projetos .box-container video {
         width: 100%;
         height: 100%;
     }
 
     /*galeria*/
+    .galeriaFotos{
+        min-height: 160vh
+    }
     .galeriaFotos .fotos {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto auto;
+
     }
 
     .galeriaFotos .fotos img {
@@ -997,17 +863,20 @@ html {
     }
 
     /*formulario*/
+    .faleConosco{
+       min-height: 200vh;
+    }
     .faleConosco .formulario {
-        width: 95%;
+        width: 90%;
     }
 
     .faleConosco .formulario button {
-        width: 50%;
+        width: 30%;
     }
 
     /*footer*/
     footer .footerContainer {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
@@ -1027,8 +896,7 @@ html {
         align-items: center
     }
 }
-
-@media screen and (min-width: 950px) and (max-width: 1199px) {
+@media screen and (min-width: 950px) and (max-width: 1049px) {
 
     :root {
         font-size: 8px;
@@ -1036,94 +904,143 @@ html {
     }
 
     /* rede social */
-    header .iconRede {
+     header .iconRede {
         top: 55%;
-        left: -15%;
+        left: -10%;
     }
-
     header .iconRede .social {
         font-size: 2.5rem;
-
     }
-
     header .iconRede .social img {
         height: 25px;
         width: 25px;
     }
-
     header .iconRede .linha {
         font-size: 2.5rem;
         padding: 0px 20px;
     }
-
     header .iconRede a {
         padding: 5px;
     }
+    /* home */
+    header #slideShowDivulga .divulga {
+        -webkit-text-stroke-width: 1.5px;
+        font-size: 5rem;
+        width: 45rem;
+        left: 60%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+    }
 
-    /* header */
+    header #slideShow .imagemHome {
+        width: 80%;
+        left: 20%;
+    }
+
     header .imagem {
-        left: 0;
+        
         position: absolute;
         object-fit: cover;
     }
-
+ /* Navegação */
     .navBar {
-        min-width: 1050px;
-        padding: 3rem;
+        max-width: 1049px;
+        min-width: 950px;
+        width: 100%;
     }
-
-    /* Navegação */
     .navBar .icones .menu {
         display: block;
     }
-
     .navBar {
         display: grid;
         justify-content: space-evenly;
     }
-
     .navBar .iconMenu {
-        margin: 10px 3em;
+        margin: 1rem 3rem;
     }
-
     .navBar .logo {
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: #d89a27;
-        margin: 10px;
+        margin: 1rem;
         padding-right: 2rem;
     }
 
     /* About */
-    section .content .texto {
-        left: 150%;
+    section .content h2 {
+        font-size: 3.2rem;
+        left: 13%;
+    }
+    section .content a {
+        width: 20rem;
+        left: 15%;
+        padding: 20px 25px;
+        border-radius: 20px;
+    }
+    section .content .lnk1 {
+        top: 130%;
+    }
+    section .content .lnk1:hover {
         width: 350px;
-        font-size: 2rem;
+        font-size: 2.2rem;
+        left: 5%;
+        top: 125%;
     }
-
-    section .content .texto.textoAtivo {
+   
+    section .content .lnk2 {
+        top: 155%;
+    }
+    section .content .lnk2:hover {
+        width: 350px;
+        font-size: 2.2rem;
+        left: 5%;
+        top: 150%;
+        padding: 15px;
+    }
+    section .content .lnk3 {
+        top: 180%;
+    }
+    section .content .lnk3:hover {
+        width: 350px;
+        font-size: 2.2rem;
+        left: 5%;
+        top: 180%;
+        padding: 10px;
+    }
+    section .content .texto {
         left: 50%;
-
+        width: 55rem;
+        font-size: 2.8rem;
     }
-
     section .content .texto h1 {
-        padding-bottom: 3rem;
-        font-size: 3rem;
+        padding-bottom: 5rem;
+        font-size: 4rem;
     }
-
-
     /*projetos*/
-    .projetos .box-container {
-        grid-template-columns: auto;
+    .videos {
+       min-height: max-content;
     }
-
+    .videos .projetos h2{
+        font-size: 4rem;
+    }
+    .galeriaFotos h1{
+        font-size: 4rem;
+    }
+    .projetos .box-container {
+        grid-template-columns: auto auto auto auto;
+        
+    }
     .projetos .box-container video {
         width: 100%;
         height: 100%;
     }
 
     /*galeria*/
+    .galeriaFotos{
+        min-height: 150vh
+    }
     .galeriaFotos .fotos {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto auto;
+
     }
 
     .galeriaFotos .fotos img {
@@ -1133,17 +1050,20 @@ html {
     }
 
     /*formulario*/
+    .faleConosco{
+       min-height: 120vh;
+    }
     .faleConosco .formulario {
-        width: 95%;
+        width: 90%;
     }
 
     .faleConosco .formulario button {
-        width: 50%;
+        width: 30%;
     }
 
     /*footer*/
     footer .footerContainer {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 

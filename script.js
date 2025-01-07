@@ -62,7 +62,7 @@ lnk3.addEventListener("mouseover", () => {
    lnk3.style.transition = ".5s ease-in-out";
 });
 lnk3.addEventListener("mouseout", () => {
-    lnk3.textContent = "Qualidade";
+    lnk3.textContent = "Segurança";
 })
  
 
